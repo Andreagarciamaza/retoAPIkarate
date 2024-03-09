@@ -39,7 +39,7 @@ To run te project from the runner, navigate to the following path: src/test/java
 
 To run and generate the live documentation, just run the following line through a terminal in the path where the project is located:
 
-`gradle clean test aggregate`.
+`./gradlew clean test -Dtest=ParallelTest --info`.
 
 Once executed, you can verify the evidences in the path:
 
