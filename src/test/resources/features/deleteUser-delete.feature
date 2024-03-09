@@ -9,3 +9,17 @@ Feature: Delete a user in the reqres.in API
     When method delete
     Then status 204
     And print response
+
+  @deleteUserNumberInvalid @delete @regression
+  Scenario: Delete a user with a number invalid
+    * path "/api/users/10000000000000000000000000"
+    When method delete
+    Then status 204
+    And print response
+
+  @deleteUserwithLetters @delete @regression
+  Scenario:  Delete a user with letters
+    * path "/api/users/JKKKA"
+    When method delete
+    Then status 204
+    And print response
