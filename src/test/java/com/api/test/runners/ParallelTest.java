@@ -11,7 +11,7 @@ public class ParallelTest {
         @Test
         void testParallel() {
             Results results = Runner.path("src/test/resources/features/")
-                    .tags("@createUsers").parallel(5);
+                    .tags("@getUser").parallel(5);
             assertEquals(0, results.getFailCount(), results.getErrorMessages());
         }
 
