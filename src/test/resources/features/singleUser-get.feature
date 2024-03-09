@@ -1,4 +1,4 @@
-Feature: User search in the API reqres.in
+Feature: Get a single user in the reqres.in API
 
   Background:
     * url url
