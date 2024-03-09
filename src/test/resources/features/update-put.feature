@@ -4,7 +4,7 @@ Feature: Update a user in the reqres.in API
     * url url
     * def responsesingleuser = read('classpath:../schemas/responseSingleUser.json')
 
-  @getUpdateUser @updateUser @regression
+  @UpdateUser @updateUser @regression
   Scenario Outline: Update a user
     * path "/api/users/2"
     Given request { "name": "<name>", "job": "<job>"}
@@ -18,7 +18,7 @@ Feature: Update a user in the reqres.in API
       | Andrea  | zion resident |
       | Daniel  | zion resident |
 
-  @getUpdateJobUser @updateUser @regression
+  @UpdateJobUser @updateUser @regression
   Scenario Outline: User's job update
     * path "/api/users/2"
     Given request { "name": "<name>", "job": "<job>"}
@@ -32,5 +32,11 @@ Feature: Update a user in the reqres.in API
       | Andrea  | doctor  |
       | Daniel  | engineer |
 
-
+  @UpdateUserInvalid @updateUser @regression
+  Scenario: Get a single user with a user invalid
+    * path "/api/users/2"
+    Given request {}
+    When method put
+    Then status 200
+    And print response
 
