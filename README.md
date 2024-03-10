@@ -41,9 +41,11 @@ To run and generate the live documentation, just run the following line through 
 
 `./gradlew clean test -Dtest=ParallelTest --info`.
 
-Once executed, you can verify the evidences in the path:
+Once executed, you can verify the evidences in the karate path:
 
-`./build/karate-reports/karate-summary.html
+`./build/karate-reports/karate-summary.html`
 
+or also in the cucumber path
 
+`./build/cucumber-html-reports/overview-features.html`
 

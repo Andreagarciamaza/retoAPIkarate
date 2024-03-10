@@ -19,7 +19,7 @@ Feature: Get a single user in the reqres.in API
     Then status 404
     And print response
 
-  @getSingleUserwithLetters @getUser @regression
+  @getSingleUserInvalidLetters @getUser @regression
   Scenario: Get a single user with a user invalid with letters
     * path "/api/users/JKKKA"
     When method get
